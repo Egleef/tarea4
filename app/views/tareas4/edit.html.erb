@@ -1,0 +1,13 @@
+<%= form_for(@tarea4, url: tareas4_path(@tarea4))  do |form| %>
+    <label>Title</label>
+    <%= form.text_field :title %>
+    </br>
+    </br>
+    <label>Description</label>
+    <%= form.text_field :description %>
+    </br>
+    </br>
+   
+    <%= form.submit 'Guardar' %>
+    <%= link_to "Todas las tareas", tareas4_path %>
+  <% end %>

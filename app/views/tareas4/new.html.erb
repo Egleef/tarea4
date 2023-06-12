@@ -1,0 +1,13 @@
+<h2>Tareas4</h2>
+<%= form_with model: @tarea4, url: tareas4_index_path do |form| %>
+    <label> Title </label>
+  <%= form.text_field :title %>
+  </br>
+  </br>
+  <label> Description </label>
+  <%= form.text_field :description %>
+  </br>
+  </br>
+ 
+  <%= form.submit 'Enviar' %>
+<% end %>
