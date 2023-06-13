@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_07_174256) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_13_125126) do
+  create_table "api_keys", force: :cascade do |t|
+    t.string "access_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tarea4s", force: :cascade do |t|
     t.string "title"
     t.string "description"
@@ -28,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_07_174256) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "authentication_token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
